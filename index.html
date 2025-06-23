@@ -762,7 +762,7 @@
                         <div class="accordion-header">Question: Leopard Biomass Calculation (2 Marks) <span class="icon fas fa-chevron-down"></span></div>
                         <div class="accordion-content">
                             <p><strong>The average mass of a fully grown leopard is about 45 kg. Using information from a graph showing leopard biomass peaking at 550-600 kg, calculate the largest number of leopards that existed. Show all working.</strong></p>
-                            <button class="reveal-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+                            <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
                             <div class="answer-reveal">
                                 <p><strong>Answer from Marking Guide:</strong></p>
                                 <p>Calculation: (550 to 600 kg) ÷ 45 kg/leopard ✓ <br> 
@@ -775,7 +775,7 @@
                         <div class="accordion-header">Question: Mark-Recapture Calculation (3 Marks) <span class="icon fas fa-chevron-down"></span></div>
                         <div class="accordion-content">
                             <p><strong>A student caught and marked (M) 45 toadlets. The next day he captured a new total of (C) 65 toadlets, of which (R) 20 had the mark. Calculate the estimated size of the population (P). Show ALL calculations.</strong></p>
-                            <button class="reveal-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+                            <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
                             <div class="answer-reveal">
                                 <p><strong>Answer from Marking Guide:</strong></p>
                                 <p>Formula: P = (M x C) / R ✓<br>
@@ -795,7 +795,7 @@
                             <p><strong>1. Is the population of Country X rapidly growing, stable, or declining? (1)</strong></p>
                             <p><strong>2. Provide TWO reasons for your answer in question 1, using evidence from the graph. (2)</strong></p>
                             <p><strong>3. State ONE socio-economic challenge this country might face due to its population structure. (1)</strong></p>
-                            <button class="reveal-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+                            <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
                             <div class="answer-reveal">
                                 <p><strong>Model Answer:</strong></p>
                                 <p>1. Rapidly growing. ✓</p>
@@ -863,6 +863,21 @@
                 });
             });
         });
+
+        // Function to handle revealing answers within an accordion
+        function revealAnswer(button) {
+            const answerDiv = button.nextElementSibling;
+            if (answerDiv) {
+                answerDiv.style.display = 'block';
+                button.style.display = 'none'; // Hide the button after clicking
+
+                const accordionContent = button.closest('.accordion-content');
+                if (accordionContent) {
+                    // Recalculate the max-height to accommodate the new content, adding a buffer
+                    accordionContent.style.maxHeight = (accordionContent.scrollHeight + 40) + 'px';
+                }
+            }	
+        }
 
     </script>
 
