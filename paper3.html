@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 11 Life Sciences Paper 2 - The Ultimate Battle Plan</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #00796b; /* Teal */
+            --secondary-color: #f5f5f5; /* Light grey */
+            --accent-color: #ffc107; /* Amber */
+            --text-color: #333;
+            --light-text-color: #fdfdfd;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.8em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+            font-style: italic;
+        }
+
+        .section {
+            background-color: #ffffff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid #e0e0e0;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        /* Tabs System */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 15px 25px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #777;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            color: var(--primary-color);
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Accordion */
+        .accordion-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background-color: #f9f9f9;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .accordion-header:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .accordion-header .icon {
+            transition: transform 0.3s ease;
+            margin-left: 10px;
+        }
+        
+        .accordion-item.active .accordion-header .icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            padding: 0 15px;
+        }
+        
+        .accordion-item.active .accordion-content {
+             padding: 15px;
+        }
+
+        /* Utility classes */
+        .highlight {
+            background-color: var(--accent-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .key-term {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+        
+        ul.fa-ul {
+            list-style-type: none;
+            padding-left: 2em;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        .dos-donts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .dos-donts-container ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+         .dos-donts-container li {
+            padding-left: 2em;
+            text-indent: -2em;
+        }
+        .dos-donts-container h4 {
+            font-size: 1.2em;
+            border-bottom: 2px solid;
+            padding-bottom: 5px;
+        }
+        .dos h4 { border-color: #4CAF50; }
+        .donts h4 { border-color: #F44336; }
+        .fa-check { color: #4CAF50; }
+        .fa-times { color: #F44336; }
+        
+        .essay-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .essay-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        td ul {
+            padding-left: 20px;
+            margin-top: 0;
+        }
+         td ul li {
+            margin-bottom: 8px;
+        }
+        .marking-rubric td {
+            font-size: 0.9em;
+        }
+         .marking-rubric th {
+            font-size: 1em;
+        }
+        
+        .answer-reveal {
+            display: none;
+            border-left: 4px solid var(--accent-color);
+            background-color: #fffbe6;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .reveal-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .reveal-btn:hover {
+            background-color: #005a4f;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Customized Notes: Ultimate Life Sciences Paper 2</h1>
+            <p>Created bv Vuyo</p>
+        </header>
+
+        <main>
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-stopwatch"></i> The Exam Battle Plan & Top Strategies</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Time Management: The 2-Hour Countdown <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <p>Time is your most valuable resource. Stick to this schedule to stay in control:</p>
+                            <ul>
+                                <li><i class="fas fa-eye" style="color:var(--primary-color)"></i> <strong>First 10 mins: Triage & Plan</strong>
+                                    <ul>
+                                        <li>Read the essay question first.</li>
+                                        <li>Skim all sources, deciding your stance.</li>
+                                        <li>Create your marked essay plan.</li>
+                                    </ul>
+                                </li>
+                                <li><i class="fas fa-question-circle" style="color:var(--primary-color)"></i> <strong>Next 50 mins: Content Questions (Q1 & Q2)</strong>
+                                    <ul>
+                                        <li>Tackle the 30-mark questions. They are often quicker marks.</li>
+                                    </ul>
+                                </li>
+                                <li><i class="fas fa-pen-alt" style="color:var(--primary-color)"></i> <strong>Next 40 mins: Write The Essay (Q3)</strong>
+                                    <ul>
+                                        <li>Stick to your plan. Write focused, themed paragraphs.</li>
+                                    </ul>
+                                </li>
+                                <li><i class="fas fa-check-double" style="color:var(--primary-color)"></i> <strong>Final 5 mins: Review & Edit</strong>
+                                    <ul>
+                                        <li>Quickly read through your essay for clarity and scientific language.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">Decoding the Question: "Red Flag" Words <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <p>IEB questions use specific words to ask for specific things. Here's what they mean:</p>
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-comment-dots"></i></span><strong>"Evaluate" / "Discuss"</strong>: You MUST discuss both sides of the argument. Present facts for and against, then conclude with your supported stance.</li>
+                                <li><span class="fa-li"><i class="fas fa-ruler-horizontal"></i></span><strong>"To what extent"</strong>: Judge how much or how far something is true. Acknowledge limitations and provide a balanced view.</li>
+                                <li><span class="fa-li"><i class="fas fa-balance-scale"></i></span><strong>"Compare"</strong>: State the similarities AND differences between two concepts.</li>
+                                <li><span class="fa-li"><i class="fas fa-search"></i></span><strong>"Assess"</strong>: Make a judgment on the value, importance, or quality of something based on evidence.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-brain"></i> Content Mastery: Key Concepts</h2>
+                <div class="tabs">
+                    <button class="tab-button active" onclick="openTab(event, 'set1')">🌿 Set 1: Population Ecology</button>
+                    <button class="tab-button" onclick="openTab(event, 'set2')">🌍 Set 2: Community & Human Impact</button>
+                </div>
+
+                <div id="set1" class="tab-content active">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">Population Parameters (NIME) <span class="icon fas fa-chevron-down"></span></div>
+                            <div class="accordion-content">
+                                <p>Population size is determined by four key factors. Remember <span class="highlight">NIME</span>:</p>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-plus-circle" style="color: #4CAF50;"></i></span><span class="key-term">Natality:</span> Birth Rate (Increases population).</li>
+                                    <li><span class="fa-li"><i class="fas fa-plus-circle" style="color: #4CAF50;"></i></span><span class="key-term">Immigration:</span> Individuals moving IN (Increases population).</li>
+                                    <li><span class="fa-li"><i class="fas fa-minus-circle" style="color: #F44336;"></i></span><span class="key-term">Mortality:</span> Death Rate (Decreases population).</li>
+                                    <li><span class="fa-li"><i class="fas fa-minus-circle" style="color: #F44336;"></i></span><span class="key-term">Emigration:</span> Individuals moving OUT (Decreases population).</li>
+                                </ul>
+                                <p><strong>Formula:</strong> Population Change = (Natality + Immigration) - (Mortality + Emigration)</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">Growth Curves & Carrying Capacity (K) <span class="icon fas fa-chevron-down"></span></div>
+                            <div class="accordion-content">
+                                <p><span class="key-term">Carrying Capacity (K):</span> The maximum number of individuals an ecosystem can sustainably support due to <span class="key-term">environmental resistance</span> (limiting factors like food/water shortages, predation, disease).</p>
+                                <p><strong>J-Curve (Exponential):</strong> Jumps up fast! Occurs with unlimited resources. Leads to a sudden population crash.</p>
+                                <p><strong>S-Curve (Logistic):</strong> Slow and steady. Shows a population adapting, growing rapidly, and then stabilizing at the carrying capacity (K).</p>
+                                <ol>
+                                    <li><strong>Lag Phase:</strong> Slow start, adaptation.</li>
+                                    <li><strong>Exponential Phase:</strong> Rapid growth.</li>
+                                    <li><strong>Deceleration Phase:</strong> Growth slows as resources become limited.</li>
+                                    <li><strong>Stationary Phase:</strong> Population stabilizes around K (Natality + Immigration ≈ Mortality + Emigration).</li>
+                                </ol>
+                            </div>
+                        </div>
+                         <div class="accordion-item">
+                            <div class="accordion-header">Population Sampling Methods <span class="icon fas fa-chevron-down"></span></div>
+                            <div class="accordion-content">
+                                <p><strong>Direct Method (Census):</strong> Counting every individual. Only for large, slow, or stationary organisms in a small area.</p>
+                                <p><strong>Indirect Methods (Estimation):</strong></p>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-th-large"></i></span><strong>Quadrat Method:</strong> For plants/slow invertebrates. A square frame is placed randomly to count organisms in a sample area. <br><em>Formula: Avg. count per quadrat × (Total area / Quadrat area)</em></li>
+                                    <li><span class="fa-li"><i class="fas fa-tag"></i></span><strong>Mark-Recapture Method:</strong> For mobile animals. Check the Practice Zone for a worked example!
+                                        <br><strong>Formula: P = (M x C) / R</strong>
+                                        <br><strong>P</strong> = Estimated Population Size
+                                        <br><strong>M</strong> = Total initially caught & Marked
+                                        <br><strong>C</strong> = Total Caught in the second sample
+                                        <br><strong>R</strong> = Number of marked animals Recaptured
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="set2" class="tab-content">
+                     <div class="accordion">
+                         <div class="accordion-item">
+                            <div class="accordion-header">Species Interactions <span class="icon fas fa-chevron-down"></span></div>
+                            <div class="accordion-content">
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-paw"></i></span><span class="key-term">Predation (+/-):</span> Predator hunts prey. Regulates both populations (prey peaks first, predator follows).</li>
+                                    <li><span class="fa-li"><i class="fas fa-fist-raised"></i></span><span class="key-term">Competition (-/-):</span> Organisms require the same limited resources. Leads to Competitive Exclusion (one species wins) or Resource Partitioning (species share by using resources differently).</li>
+                                    <li><span class="fa-li"><i class="fas fa-handshake"></i></span><span class="key-term">Symbiosis:</span> Close, long-term interactions.
+                                        <ul>
+                                           <li><em>Mutualism (+/+):</em> Both benefit (e.g., bees and flowers).</li>
+                                           <li><em>Commensalism (+/0):</em> One benefits, other unaffected (e.g., barnacles on a whale).</li>
+                                           <li><em>Parasitism (+/-):</em> One benefits, other is harmed (e.g., tapeworm in a human).</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">Ecological Succession <span class="icon fas fa-chevron-down"></span></div>
+                            <div class="accordion-content">
+                                <p>The predictable process of change in an ecosystem over time.</p>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-mountain"></i></span><span class="key-term">Primary Succession:</span> Begins on bare rock where no life/soil existed before (e.g., volcanic island). <span class="key-term">Pioneer species</span> like lichens are key.</li>
+                                    <li><span class="fa-li"><i class="fas fa-fire-extinguisher"></i></span><span class="key-term">Secondary Succession:</span> Occurs after a disturbance (like a fire) where soil remains. Much faster.</li>
+                                </ul>
+                                <p>The process moves from Pioneer Species &rarr; Intermediate Species &rarr; stable <span class="key-term">Climax Community</span>.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">Human Impact & Ecological Footprint <span class="icon fas fa-chevron-down"></span></div>
+                            <div class="accordion-content">
+                                <p><span class="key-term">Ecological Footprint:</span> The measure of human demand on Earth's ecosystems. It's the amount of land needed to support a lifestyle.</p>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-chart-pie"></i></span><span class="highlight">Key SA Stat:</span> South Africans have an average ecological footprint of <strong>2.8 global hectares</strong>, but the Earth can only sustainably provide <strong>1.8 ha</strong> per person. This is an "ecological overdraft."</li>
+                                    <li><span class="fa-li"><i class="fas fa-users"></i></span><span class="key-term">Overpopulation vs. Overconsumption:</span> Developing nations often face issues of rapid population growth, while developed nations drive environmental damage through high rates of resource consumption.</li>
+                                    <li><span class="fa-li"><i class="fas fa-globe-americas"></i></span><span class="highlight">Key Global Stat:</span> Developed nations make up ~20% of the world's population but consume over 50% of its resources.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-pen-alt"></i> The 40-Mark Essay Fortress</h2>
+                <div class="essay-box">
+                    <h4>Example Essay Prompt</h4>
+                    <p><em>"Consider the following statement: South Africa needs to implement a policy limiting the number of children allowed per family. Using the source material provided as well as your own knowledge, discuss your opinion on the statement..."</em></p>
+                </div>
+                <br>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Step 1: The Marked Planning Phase (Crucial 6 Marks!) <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <p>Your plan WILL be marked. Before you write a single paragraph, create a table or mind map. Use one colour for points FOR your argument and another for points AGAINST (counter-arguments). This example is from the marking guide.</p>
+                            <h4>Example Plan: For vs. Against a Population Policy</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Arguments FOR the Policy</th>
+                                        <th>Arguments AGAINST the Policy (Counter-Arguments)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Source A/E:</strong> High birth rate, decreasing mortality/infant mortality, and rising life expectancy leads to population growth.</td>
+                                        <td><strong>Source B/H:</strong> Growth rate is slowing (only 0.89% in 2015); China's policy had negative consequences (labour shortage, skewed sex ratio).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Source B/D/G:</strong> Population has trebled since 1950, causing stress on resources (44 people/m²). We exceed our sustainable footprint of 1.8 ha.</td>
+                                        <td><strong>Source C:</strong> Unfavourable dependency ratio means pressure on the working population is already high; this might worsen it.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Source C:</strong> High dependency ratio puts pressure on the workforce, education, and healthcare systems.</td>
+                                        <td><strong>Source F:</strong> Such policies can be unethical and violate human rights (e.g., forced sterilisation).</td>
+                                    </tr>
+                                     <tr>
+                                        <td><strong>Own Knowledge:</strong> Links to global warming, desertification, lower carrying capacity, and high unemployment.</td>
+                                        <td><strong>Own Knowledge:</strong> Education can reduce birth rates without coercion. Religious objections to contraception/policies.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Step 2: Writing The Essay (The Golden Formula) <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                             <h4>Introduction (Example from PowerPoint)</h4>
+                             <div class="essay-box">
+                                <p>The rapid growth of the human population has placed excessive strain on the planet which poses potentially devastating consequences for human survival and that of other species. This essay will argue that definitive action in reducing human population size is thus necessary to ensure the continuation of Earth and all life forms it supports, by examining ecological pressures, socio-economic strain, and carrying capacity.</p>
+                            </div>
+                            
+                            <h4>The Perfect Paragraph Structure</h4>
+                             <div class="essay-box">
+                                <ol>
+                                    <li><strong>Topic Sentence:</strong> State the main point of the paragraph.</li>
+                                    <li><strong>Fact 1 (from a source):</strong> Present a piece of data or evidence.</li>
+                                    <li><strong>Explanation (own knowledge):</strong> Explain what this fact means and link it to a biological concept (e.g., carrying capacity, biodiversity loss).</li>
+                                    <li><strong>Fact 2/3 (source/own knowledge):</strong> Add more evidence to strengthen your point.</li>
+                                    <li><strong>Counter-Argument & Rebuttal:</strong> Acknowledge the other side, then defeat it. "<em>Although some argue that..., the evidence strongly suggests...</em>"</li>
+                                    <li><strong>Concluding Sentence:</strong> Link the paragraph back to your main argument.</li>
+                                </ol>
+                            </div>
+                            
+                             <h4>Conclusion (Example from PowerPoint)</h4>
+                             <div class="essay-box">
+                                <p>Ultimately, with the consideration of the impact of human overpopulation on overconsumption and environmental degradation, the pressing need arises to decrease the size of human population growth so as to ensure the continuation of planet Earth and all of its life forms it supports.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Step 3: Master the Marking Rubric <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <p>This is how your essay is marked. Aim for the 4-mark column in every category!</p>
+                            <div class="marking-rubric" style="overflow-x:auto;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Criteria</th>
+                                        <th>1 Mark</th>
+                                        <th>2 Marks</th>
+                                        <th>3 Marks</th>
+                                        <th>4 Marks</th>
+                                        <th>Max</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Planning (x2)</strong></td>
+                                        <td>Decision given; key points present.</td>
+                                        <td>Key points developed for/against.</td>
+                                        <td>Key points developed & Source refs identified.</td>
+                                        <td>-</td>
+                                        <td><strong>6</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Use of Knowledge from Sources (x2)</strong></td>
+                                        <td>Up to 1/4 of potential detail used.</td>
+                                        <td>Up to 1/2 of potential detail used.</td>
+                                        <td>Up to 3/4 of potential detail used.</td>
+                                        <td>Source detail - very close to full potential used.</td>
+                                        <td><strong>8</strong></td>
+                                    </tr>
+                                     <tr>
+                                        <td><strong>Use of Own Knowledge</strong></td>
+                                        <td>Some facts beyond source.</td>
+                                        <td>Many facts beyond source.</td>
+                                        <td>Some facts beyond source, integrated into argument.</td>
+                                        <td>Many facts beyond source, integrated into argument.</td>
+                                        <td><strong>4</strong></td>
+                                    </tr>
+                                     <tr>
+                                        <td><strong>Quality of Argument (x2)</strong></td>
+                                        <td>Facts with little linkage or reasoning.</td>
+                                        <td>Reasoning correct but hard to follow.</td>
+                                        <td>Supports position, reasoning is clear.</td>
+                                        <td>Strongly supports position, flow is logical, well-integrated.</td>
+                                        <td><strong>8</strong></td>
+                                    </tr>
+                                     <tr>
+                                        <td><strong>Fairness (Counter Opinions)</strong></td>
+                                        <td>1-2 counter opinions given.</td>
+                                        <td>3-4 counter opinions given.</td>
+                                        <td>Integration of 1-2 counter opinions into argument.</td>
+                                        <td>Integration of 3-4 counter opinions into argument.</td>
+                                        <td><strong>4</strong></td>
+                                    </tr>
+                                     <tr>
+                                        <td><strong>Presentation</strong></td>
+                                        <td>Almost unintelligible, unscientific tone.</td>
+                                        <td>Tone, language, terminology weak.</td>
+                                        <td>Tone is consistent and scientific, good language.</td>
+                                        <td>Tone is mature, excellent language, correct paragraphing.</td>
+                                        <td><strong>4</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Scientific Merit</strong></td>
+                                        <td colspan="4">Essay shows academic rigour, accurate reasoning, insight and cohesiveness.</td>
+                                        <td><strong>2</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Decision</strong></td>
+                                        <td>Vague or changed position.</td>
+                                        <td colspan="3">Clear decision made.</td>
+                                        <td><strong>2</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4"><strong>TOTAL</strong></td>
+                                        <td><strong>40</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">Step 4: The Ultimate Dos and Don'ts <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="dos-donts-container">
+                                <div class="dos">
+                                    <h4><i class="fas fa-check"></i> DO...</h4>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Start with an introduction stating your decision.</li>
+                                        <li><i class="fas fa-check"></i> Be as scientific as possible with your language.</li>
+                                        <li><i class="fas fa-check"></i> Structure paragraphs by theme.</li>
+                                        <li><i class="fas fa-check"></i> Integrate counter-arguments using 'although' or 'however'.</li>
+                                        <li><i class="fas fa-check"></i> During PLANNING, write "Source A says...".</li>
+                                        <li><i class="fas fa-check"></i> In the ESSAY, write "Evidence suggests..." or "Scientific data shows...".</li>
+                                    </ul>
+                                </div>
+                                <div class="donts">
+                                    <h4><i class="fas fa-times"></i> DON'T...</h4>
+                                    <ul>
+                                        <li><i class="fas fa-times"></i> Use emotive language ("It's devastating...").</li>
+                                        <li><i class="fas fa-times"></i> Pose any questions in your essay.</li>
+                                        <li><i class="fas fa-times"></i> Use direct quotes from the sources.</li>
+                                        <li><i class="fas fa-times"></i> Use slang, contractions (don't, can't), or exclamation marks!</li>
+                                        <li><i class="fas fa-times"></i> Waffle or use broad generalizations.</li>
+                                        <li><i class="fas fa-times"></i> Refer to sources by name in the essay (e.g., "Source A says...").</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-pencil-ruler"></i> Practice Zone: Test Your Knowledge</h2>
+                <p>Let's apply what you've learned to actual exam questions from the marking guide. Try to answer first, then click to reveal the solution.</p>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Question: Leopard Biomass Calculation (2 Marks) <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <p><strong>The average mass of a fully grown leopard is about 45 kg. Using information from a graph showing leopard biomass peaking at 550-600 kg, calculate the largest number of leopards that existed. Show all working.</strong></p>
+                            <button class="reveal-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+                            <div class="answer-reveal">
+                                <p><strong>Answer from Marking Guide:</strong></p>
+                                <p>Calculation: (550 to 600 kg) ÷ 45 kg/leopard &check; <br> 
+                                = 12.2 to 13.3 leopards. <br> 
+                                Final Answer: <strong>12 to 13 leopards</strong> &check;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Question: Mark-Recapture Calculation (3 Marks) <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <p><strong>A student caught and marked (M) 45 toadlets. The next day he captured a new total of (C) 65 toadlets, of which (R) 20 had the mark. Calculate the estimated size of the population (P). Show ALL calculations.</strong></p>
+                            <button class="reveal-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+                            <div class="answer-reveal">
+                                <p><strong>Answer from Marking Guide:</strong></p>
+                                <p>Formula: P = (M x C) / R &check;<br>
+                                Substitution: P = (45 x 65) / 20 &check;<br>
+                                P = 2925 / 20<br>
+                                P = 146.25 <br>
+                                Final Answer: &approx; <strong>146 toadlets</strong> &check;
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+
+        // Tabs Logic
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Accordion Logic
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Toggle current item
+                    if (isActive) {
+                        item.classList.remove('active');
+                        content.style.maxHeight = null;
+                        content.style.padding = "0 15px";
+                    } else {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 40 + "px";
+                        content.style.padding = "15px";
+                    }
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>
+```
